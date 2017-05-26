@@ -1,0 +1,19 @@
+
+rewriteengine on
+RewriteCond %{REQUEST_URI} ^.*wp\-login\.php.*$
+RewriteCond %{HTTP_COOKIE} !^.*admin_authenticated\=yes.*$
+RewriteCond %{REQUEST_URI} !^.*auth.php.*$
+rewriterule ^(.*)$ /auth.php?red=%1 [R,L]
+rewriterule ^.*auth.php.*$ - [PT]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

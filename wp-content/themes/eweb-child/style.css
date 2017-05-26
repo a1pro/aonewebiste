@@ -1,0 +1,20 @@
+/*
+Theme Name: eweb-a1 Child Theme
+Theme URI: http://a1professionals.com/
+Description: This is a custom child theme for Salient
+Author: My Name
+Author URI: http://a1professionals.com/
+Template: eweb-a1
+Version: 0.1
+*/
+
+@import url("../eweb-a1/style.css");
+
+#header-outer { padding: 4px 0px 0px 0px;}
+
+
+.row .col p:last-child {
+    padding-bottom: 30px;
+}
+
+
